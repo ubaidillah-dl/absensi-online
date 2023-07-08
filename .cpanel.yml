@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/wwwgresi/public_html/absensi/
-    - /bin/cp -R * $DEPLOYPATH
