@@ -152,13 +152,13 @@ if (isset($_POST["datang"])) {
 
     <script src="js/jquery-2.2.3.min.js"></script>
     <script>
-        $(document).ready(function() {
-            window.setTimeout(function() {
-                $(".notif").fadeTo(500, 0).slideUp(500, function() {
-                    $(this).remove();
-                });
-            }, 2000);
-        });
+    $(document).ready(function() {
+        window.setTimeout(function() {
+            $(".notif").fadeTo(500, 0).slideUp(500, function() {
+                $(this).remove();
+            });
+        }, 2000);
+    });
     </script>
 </head>
 
@@ -177,7 +177,7 @@ if (isset($_POST["datang"])) {
                 <div class="row mb-3">
                     <div class="col">
                         <div class="d-flex justify-content-center align-items-center">
-                            <h4 class="mb-0">Absensi</h4>
+                            <h4 class="mb-0">Absen</h4>
                         </div>
                     </div>
                 </div>
@@ -187,7 +187,9 @@ if (isset($_POST["datang"])) {
                 <div class="row">
                     <div class="col d-flex justify-content-center align-items-center">
                         <div class="w-100">
-                            <input class="shadow-sm form-control rounded-0 rounded-top text-center border" type="text" id="pengguna" name="pengguna" placeholder="Nama Karyawan" aria-label=".form-control-sm example">
+                            <input class="shadow-sm form-control rounded-0 rounded-top text-center border" type="text"
+                                id="pengguna" name="pengguna" placeholder="Nama Karyawan"
+                                aria-label=".form-control-sm example">
                         </div>
                     </div>
                 </div>
@@ -197,7 +199,10 @@ if (isset($_POST["datang"])) {
                 <div class="row mb-2">
                     <div class="col d-flex justify-content-center align-items-center">
                         <div class="w-100">
-                            <input class="form-control shadow-sm rounded-0 rounded-bottom text-center border-0 border-bottom border-end border-start" type="text" id="kode" name="kode" placeholder="Kode" aria-label=".form-control-sm example">
+                            <input
+                                class="form-control shadow-sm rounded-0 rounded-bottom text-center border-0 border-bottom border-end border-start"
+                                type="text" id="kode" name="kode" placeholder="Kode"
+                                aria-label=".form-control-sm example">
                             <input type="hidden" name="latitude" id="latitude" value="">
                             <input type="hidden" name="longitude" id="longitude" value="">
                         </div>
@@ -210,14 +215,14 @@ if (isset($_POST["datang"])) {
                     <div class="col">
                         <div class=" d-flex justify-content-center " id="demo">
                             <?php if ($err) { ?>
-                                <div class="notif text-danger" style="font-size: 14px;">
-                                    <?php echo $err ?>
-                                </div>
+                            <div class="notif text-danger" style="font-size: 14px;">
+                                <?php echo $err ?>
+                            </div>
                             <?php  } ?>
                             <?php if ($notif) { ?>
-                                <div class="notif text-success" style="font-size: 14px;">
-                                    <?php echo $notif ?>
-                                </div>
+                            <div class="notif text-success" style="font-size: 14px;">
+                                <?php echo $notif ?>
+                            </div>
                             <?php  } ?>
                         </div>
                     </div>
@@ -229,7 +234,10 @@ if (isset($_POST["datang"])) {
                     <div class="col-4">
                         <div class="d-flex justify-content-start">
 
-                            <button type="submit" id="datang" name="datang" class="shadow-sm btn-sm btn rounded fw-normal text-white px-2" data-bs-toggle="modal" data-bs-target="#exampleModalCentered" style="background-color: rgba(41,97,174,1);  width:70px">
+                            <button type="submit" id="datang" name="datang"
+                                class="shadow-sm btn-sm btn rounded fw-normal text-white px-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalCentered"
+                                style="background-color: rgba(41,97,174,1);  width:70px">
                                 Datang
                             </button>
                         </div>
@@ -238,22 +246,30 @@ if (isset($_POST["datang"])) {
                         <div class=" d-flex justify-content-center">
 
                             <!-- izin -->
-                            <button type="button" class="shadow-sm btn-sm btn rounded fw-normal text-white px-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="background-color: rgba(41,97,174,1);  width:70px">
+                            <button type="button" class="shadow-sm btn-sm btn rounded fw-normal text-white px-2"
+                                data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                style="background-color: rgba(41,97,174,1);  width:70px">
                                 Izin
                             </button>
 
-                            <div class="modal modal-sm fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal modal-sm fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="staticBackdropLabel">Keterangan</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
                                             <div class="row mb-3">
                                                 <div class="col">
                                                     <div class="d-flex justify-content-center ">
-                                                        <input class="form-control shadow-sm rounded text-center border" type="text" id="keteranganizin" autocomplete="off" name="keteranganizin" placeholder="Tulis Keterangan Izin" aria-label=".form-control-sm example">
+                                                        <input class="form-control shadow-sm rounded text-center border"
+                                                            type="text" id="keteranganizin" autocomplete="off"
+                                                            name="keteranganizin" placeholder="Tulis Keterangan Izin"
+                                                            aria-label=".form-control-sm example">
                                                     </div>
                                                 </div>
                                             </div>
@@ -261,7 +277,9 @@ if (isset($_POST["datang"])) {
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="d-flex justify-content-center ">
-                                                        <button type="submit" name="izin" id="izin" class="shadow-sm button rounded btn btn-sm fw-normal text-white px-2" style="background-color: rgba(41,97,174,1); height: 30px; width:50px">
+                                                        <button type="submit" name="izin" id="izin"
+                                                            class="shadow-sm button rounded btn btn-sm fw-normal text-white px-2"
+                                                            style="background-color: rgba(41,97,174,1); height: 30px; width:50px">
                                                             Kirim
                                                         </button>
                                                     </div>
@@ -277,7 +295,10 @@ if (isset($_POST["datang"])) {
                     </div>
                     <div class="col-4">
                         <div class="d-flex justify-content-end ">
-                            <button type="submit" id="pulang" name="pulang" class=" shadow-sm btn-sm btn rounded fw-normal text-white px-2" data-bs-toggle="modal" data-bs-target="#exampleModalCentered" style="background-color: rgba(41,97,174,1); width:70px">
+                            <button type="submit" id="pulang" name="pulang"
+                                class=" shadow-sm btn-sm btn rounded fw-normal text-white px-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalCentered"
+                                style="background-color: rgba(41,97,174,1); width:70px">
                                 Pulang
                             </button>
                         </div>
@@ -288,7 +309,8 @@ if (isset($_POST["datang"])) {
                 <div class="row mt-5 mb-3">
                     <div class="col">
                         <div class="text-center">
-                            <a target="_blank" style="text-decoration: none; color:rgba(41,97,174,1);" href="confkaryawan/daftar_karyawan.php">Karyawan
+                            <a target="_blank" style="text-decoration: none; color:rgba(41,97,174,1);"
+                                href="confkaryawan/daftar_karyawan.php">Karyawan
                                 baru ?</a>
                         </div>
                     </div>
