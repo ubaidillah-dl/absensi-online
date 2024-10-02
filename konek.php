@@ -1,5 +1,6 @@
 <?php 
-	$conn = mysqli_connect("localhost", "wwwgresi_absensi", "YOKkk3zeYo3A", "wwwgresi_absensi");
+	// $conn = mysqli_connect("localhost", "wwwgresi_absensi", "YOKkk3zeYo3A", "wwwgresi_absensi");
+$conn = mysqli_connect("localhost", "root", "", "absen");
 	
     function query($query){
         global $conn;
@@ -85,4 +86,3 @@
 
         return mysqli_affected_rows($conn);
     }
-?>
